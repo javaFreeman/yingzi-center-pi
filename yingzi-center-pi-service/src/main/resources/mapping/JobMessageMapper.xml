@@ -5,7 +5,7 @@
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="job_number" property="jobNumber" jdbcType="INTEGER" />
     <result column="post" property="post" jdbcType="VARCHAR" />
-    <result column="entry_time" property="entryTime" jdbcType="TIMESTAMP" />
+    <result column="entry_time" property="entryTime" jdbcType="VARCHAR" />
     <result column="standing" property="standing" jdbcType="INTEGER" />
     <result column="base_money" property="baseMoney" jdbcType="VARCHAR" />
     <result column="multiple" property="multiple" jdbcType="VARCHAR" />
@@ -33,7 +33,7 @@
       multiple, gmt_created, gmt_modified, 
       is_deleted)
     values (#{id,jdbcType=INTEGER}, #{jobNumber,jdbcType=INTEGER}, #{post,jdbcType=VARCHAR}, 
-      #{entryTime,jdbcType=TIMESTAMP}, #{standing,jdbcType=INTEGER}, #{baseMoney,jdbcType=VARCHAR},
+      #{entryTime,jdbcType=VARCHAR}, #{standing,jdbcType=INTEGER}, #{baseMoney,jdbcType=VARCHAR},
       #{multiple,jdbcType=VARCHAR}, #{gmtCreated,jdbcType=TIMESTAMP}, #{gmtModified,jdbcType=TIMESTAMP}, 
       #{isDeleted,jdbcType=INTEGER})
   </insert>
@@ -82,7 +82,7 @@
         #{post,jdbcType=VARCHAR},
       </if>
       <if test="entryTime != null" >
-        #{entryTime,jdbcType=TIMESTAMP},
+        #{entryTime,jdbcType=VARCHAR},
       </if>
       <if test="standing != null" >
         #{standing,jdbcType=INTEGER},
@@ -114,7 +114,7 @@
         post = #{post,jdbcType=VARCHAR},
       </if>
       <if test="entryTime != null" >
-        entry_time = #{entryTime,jdbcType=TIMESTAMP},
+        entry_time = #{entryTime,jdbcType=VARCHAR},
       </if>
       <if test="standing != null" >
         standing = #{standing,jdbcType=INTEGER},
@@ -141,7 +141,7 @@
     update job_message
     set job_number = #{jobNumber,jdbcType=INTEGER},
       post = #{post,jdbcType=VARCHAR},
-      entry_time = #{entryTime,jdbcType=TIMESTAMP},
+      entry_time = #{entryTime,jdbcType=VARCHAR},
       standing = #{standing,jdbcType=INTEGER},
       base_money = #{baseMoney,jdbcType=VARCHAR},
       multiple = #{multiple,jdbcType=VARCHAR},

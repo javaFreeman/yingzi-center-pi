@@ -26,9 +26,8 @@ public class JobMessageVo {
     private Integer jobNumber;
     @ApiModelProperty(name = "post",value = "岗位",example = "Java后端",dataType = "String")
     private String post;
-    @ApiModelProperty(name = "entryTime",value = "入职时间",example = "20180920",dataType = "Date",required = true)
-    @DateTimeFormat(pattern="yyyy-MM-dd")
-    private Date entryTime;
+    @ApiModelProperty(name = "entryTime",value = "入职时间",example = "20180920",dataType = "String",required = true)
+    private String entryTime;
     @ApiModelProperty(name = "standing",value = "工龄，不满一年，向下取整",example = "3",dataType = "Integer")
     private Integer standing;
     @ApiModelProperty(name = "baseMoney",value = "基本工资",example = "5000",dataType = "String")

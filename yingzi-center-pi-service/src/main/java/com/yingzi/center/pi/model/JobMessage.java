@@ -19,8 +19,8 @@ public class JobMessage {
     private Integer jobNumber;
 
     private String post;
-    @DateTimeFormat(pattern="yyyy-MM-dd")
-    private Date entryTime;
+
+    private String entryTime;
 
     private Integer standing;
 

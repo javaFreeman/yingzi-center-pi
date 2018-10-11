@@ -22,5 +22,10 @@ public interface JobMessageService {
      */
     int updateJob(JobMessageVo jobMessageVo);
 
+    /**
+     * 获取员工工作信息
+     * @param jobNumber
+     * @return
+     */
     List<JobMessageVo> getJob(Integer jobNumber);
 }
