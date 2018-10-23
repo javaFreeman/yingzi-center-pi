@@ -10,6 +10,7 @@ import com.yingzi.center.pi.vo.MonthGradeVo;
 import com.yingzi.lib.logging.Logger;
 import com.yingzi.lib.logging.YZLogManager;
 import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.Calendar;
@@ -21,6 +22,7 @@ import java.util.List;
  * @author: BaoGuoQiang
  * @create: 2018-10-10 10:53
  **/
+//@Service("monthGradeServiceImpl")
 @HSFProvider(serviceInterface = MonthGradeService.class, serviceVersion = "${spring.hsf.pi.version:1.0.0}", serviceGroup = "${spring.hsf.pi.serviceGroup:HSF}")
 public class MonthGradeServiceImpl implements MonthGradeService{
     private static final Logger logger = YZLogManager.getLogger(MonthGradeService.class);

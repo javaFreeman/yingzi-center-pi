@@ -151,6 +151,18 @@
             <version>0.1.0-ALPHA</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.yingzi</groupId>
+            <artifactId>yingzi-lib-config</artifactId>
+            <version>0.1.0-ALPHA</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.edas</groupId>
+            <artifactId>edas-sdk</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+
     </dependencies>
 
     <dependencyManagement>

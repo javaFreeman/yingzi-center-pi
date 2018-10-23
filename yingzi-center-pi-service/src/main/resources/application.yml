@@ -9,12 +9,32 @@ spring:
       version: 1.0.0
       timeout: 3000
       serviceGroup: yingzi-dev
-    location:
-      version: 0.1.0
-      timeout: 3000
-      serviceGroup: yingzi-dev
   application:
     name: pi-provider
+
+kafka:
+  internal:
+    bootstrap-servers: 172.19.60.201:9092
+    producer:
+      retries: 0
+      batch-size: 10
+      buffer-memory: 5120000
+    consumer:
+      group-id: pi-internal-group
+      auto-offset-reset: latest
+      enable-auto-commit: true
+      auto-commit-interval: 100
+  external:
+    bootstrap-servers: 172.19.60.201:9093
+    producer:
+      retries: 0
+      batch-size: 10
+      buffer-memory: 5120000
+    consumer:
+      group-id: pi-external-group
+      auto-offset-reset: latest
+      enable-auto-commit: true
+      auto-commit-interval: 100
 
 
 mybatis:
@@ -32,8 +52,3 @@ yz:
     id: yingzi-center-iot
     package: com.yingzi.center.pi
     desc:
-
-edas:
-  mysql:
-    group: yingzi-bgq
-    dataId: com.yingzi.center.pi.datasource

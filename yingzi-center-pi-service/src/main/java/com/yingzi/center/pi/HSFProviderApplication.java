@@ -7,12 +7,16 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.context.ApplicationContext;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
-@SpringBootApplication
-@EnableScheduling
-@MapperScan("com.yingzi.center.pi.mapper")
+@SpringBootApplication(exclude={DataSourceAutoConfiguration.class,
+        HibernateJpaAutoConfiguration.class})
+@EnableAsync
+@MapperScan(basePackages = {"com.yingzi.center.pi"})
 public class HSFProviderApplication {
     @Autowired
     static ApplicationContext context;

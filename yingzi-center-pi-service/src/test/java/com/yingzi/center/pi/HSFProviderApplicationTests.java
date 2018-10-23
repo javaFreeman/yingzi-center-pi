@@ -1,4 +1,4 @@
-package com.yingzi.center.pi.yingzicenterpi;
+package com.yingzi.center.pi;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

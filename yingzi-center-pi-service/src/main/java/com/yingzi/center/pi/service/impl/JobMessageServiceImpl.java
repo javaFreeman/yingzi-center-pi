@@ -8,6 +8,7 @@ import com.yingzi.center.pi.vo.JobMessageVo;
 import com.yingzi.lib.logging.Logger;
 import com.yingzi.lib.logging.YZLogManager;
 import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
@@ -20,6 +21,7 @@ import java.util.List;
  * @author: BaoGuoQiang
  * @create: 2018-10-07 16:46
  **/
+//@Service("jobMessageServiceImpl")
 @HSFProvider(serviceInterface = JobMessageService.class, serviceVersion = "${spring.hsf.pi.version:1.0.0}", serviceGroup = "${spring.hsf.pi.serviceGroup:HSF}")
 public class JobMessageServiceImpl implements JobMessageService {
     private static final Logger logger = YZLogManager.getLogger(JobMessageService.class);

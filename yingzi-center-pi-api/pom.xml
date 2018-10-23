@@ -41,6 +41,12 @@
             <artifactId>dozer</artifactId>
             <version>5.5.1</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.yingzi</groupId>
+            <artifactId>yingzi-lib-config</artifactId>
+            <version>0.1.0-ALPHA</version>
+        </dependency>
     </dependencies>
 
     <distributionManagement>

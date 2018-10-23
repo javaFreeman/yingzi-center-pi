@@ -8,6 +8,7 @@ import com.yingzi.center.pi.vo.PersonInformationVo;
 import com.yingzi.lib.logging.Logger;
 import com.yingzi.lib.logging.YZLogManager;
 import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
@@ -17,6 +18,7 @@ import javax.annotation.Resource;
  * @author: BaoGuoQiang
  * @create: 2018-10-07 15:15
  **/
+//@Service("personInformationServiceImpl")
 @HSFProvider(serviceInterface = PersonInformationService.class, serviceVersion = "${spring.hsf.pi.version:1.0.0}", serviceGroup = "${spring.hsf.pi.serviceGroup:HSF}")
 public class PersonInformationServiceImpl implements PersonInformationService {
     private static final Logger logger = YZLogManager.getLogger(PersonInformationService.class);
