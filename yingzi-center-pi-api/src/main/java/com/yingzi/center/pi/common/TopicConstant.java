@@ -10,5 +10,9 @@ package com.yingzi.center.pi.common;
 public class TopicConstant {
     private TopicConstant(){super();}
 
+
     public static final String MEMBER2CAPTAIN = "topic.Member2Captain.person";
+
+    public static final String MEMBER2CAPTAINPERIOD = "topic.Member2Captain.period";
+
 }

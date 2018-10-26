@@ -24,14 +24,16 @@ public class DataSourceConfig {
     @Bean(name="dataSource")
     public DataSource druidDataSource()throws IOException {
         Configurator configurator = Configurator.getConfigurator();
-        Config config = configurator.readYaml(dbDataId);
-        config = config.getChild("yz").getChild("pi").getChild("datasource");
+        Config config = configurator.readJson(dbDataId);
 
+        /*Config config = configurator.readYaml(dbDataId);
+        config = config.getChild("yz").getChild("pi").getChild("datasource");
+        */
         DruidDataSource datasource = new DruidDataSource();
-        datasource.setUrl(config.getString("url"));
-        datasource.setUsername(config.getString("username"));
-        datasource.setPassword(config.getString("password"));
-        datasource.setDriverClassName(config.getString("driver-class-name"));
+        datasource.setUrl(config.getString("jdbcUrl"));
+        datasource.setUsername(config.getString("jdbcUserName"));
+        datasource.setPassword(config.getString("jdbcUserPassword"));
+        datasource.setDriverClassName(config.getString("driverClassName"));
 
         if (config.getInteger("minIdle") != null) {
             datasource.setMinIdle(config.getInteger("minIdle"));

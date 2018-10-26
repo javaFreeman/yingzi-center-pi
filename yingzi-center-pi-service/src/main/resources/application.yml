@@ -52,3 +52,8 @@ yz:
     id: yingzi-center-iot
     package: com.yingzi.center.pi
     desc:
+
+schedule:
+  member:
+    report:
+      period: 0 */5 * * * ?

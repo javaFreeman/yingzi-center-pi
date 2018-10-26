@@ -6,6 +6,7 @@ import com.yingzi.lib.logging.Logger;
 import com.yingzi.lib.logging.YZLogManager;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.listener.MessageListener;
 import org.springframework.stereotype.Component;
 
@@ -24,6 +25,7 @@ public class CaptainListener implements MessageListener<String,String> {
     private CaptainHandler captainHandler;
 
     @Override
+    @KafkaListener(topics = {"zhisheng"})
     public void onMessage(ConsumerRecord<String,String> data){
         String topic = data.topic();
         String value = data.value();

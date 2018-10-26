@@ -13,10 +13,11 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
-@SpringBootApplication(exclude={DataSourceAutoConfiguration.class,
-        HibernateJpaAutoConfiguration.class})
-@EnableAsync
-@MapperScan(basePackages = {"com.yingzi.center.pi"})
+import javax.annotation.Resource;
+
+@SpringBootApplication
+@EnableScheduling
+@MapperScan(basePackages = {"com.yingzi.center.pi.mapper"})
 public class HSFProviderApplication {
     @Autowired
     static ApplicationContext context;
